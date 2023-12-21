@@ -1,0 +1,11 @@
+// Locators
+{
+  "emailInput": "input[data-testid=royal_email]",
+  "loginButton": "button[data-testid=royal_login_button]"
+}
+
+// Test Data
+{
+  "password": "rushi@123"
+}
+``` fixture
