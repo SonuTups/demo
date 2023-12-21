@@ -1,0 +1,22 @@
+// Please replace the locators, values, and URLs with appropriate data
+describe('fixture data', () => {
+  before(() => {
+    cy.fixture('loginCredentials.json').as('loginData');
+  });
+
+  it('loginCredentials', function () {
+    const { email, password } = this.loginData;
+    cy.visit('https://www.facebook.com/');
+    cy.get('[data-testid=royal_email]').type(email);
+    cy.get('[data-testid=royal_pass]').type(password);
+    cy.get('[data-testid=royal_login_button]').click();
+  });
+});
+```
+Fixture Data:
+```json
+{
+  "email": "rushi@gmail.com",
+  "password": "rushi@123"
+}
+``` fixture
